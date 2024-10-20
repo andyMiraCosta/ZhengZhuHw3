@@ -16,8 +16,9 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.kangengineering.simplemvvmcompose.di.appModules
-import com.kangengineering.simplemvvmcompose.view.theme.SimpleMvvmComposeTheme
-import com.kangengineering.simplemvvmcompose.view.PetList
+import com.kangengineering.simplemvvmcompose.ui.theme.SimpleMvvmComposeTheme
+import com.kangengineering.simplemvvmcompose.views.BitCoinList
+import com.kangengineering.simplemvvmcompose.views.PetList
 import org.koin.compose.KoinApplication
 
 @OptIn(ExperimentalMaterial3Api::class)
@@ -30,7 +31,7 @@ class MainActivity : ComponentActivity() {
                     topBar = {
                         TopAppBar(
                             title = { 
-                                Text(text = "Pets")
+                                Text(text = "Bitcoins")
                             },
                             colors =  TopAppBarDefaults.topAppBarColors(
                                 containerColor = MaterialTheme.colorScheme.primary,
@@ -38,7 +39,7 @@ class MainActivity : ComponentActivity() {
                         )
                     },
                     content =  { paddingValues ->
-                        PetList(
+                        BitCoinList(
                             modifier = Modifier
                                 .fillMaxSize()
                                 .padding(paddingValues)
@@ -64,7 +65,7 @@ fun MainPreview() {
     KoinApplication(
         application = { modules(appModules) }
     ) {
-        PetList(
+        BitCoinList(
             modifier = Modifier
                 .fillMaxSize()
                 .padding(16.dp)

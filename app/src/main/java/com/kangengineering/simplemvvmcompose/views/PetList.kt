@@ -1,4 +1,4 @@
-package com.kangengineering.simplemvvmcompose.view
+package com.kangengineering.simplemvvmcompose.views
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Row
