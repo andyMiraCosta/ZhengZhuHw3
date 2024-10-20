@@ -37,7 +37,7 @@ class MainActivity : ComponentActivity() {
                                 containerColor = MaterialTheme.colorScheme.primary,
                             )
                         )
-                    },
+                    },//change
                     content =  { paddingValues ->
                         BitCoinList(
                             modifier = Modifier
